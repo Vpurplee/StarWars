@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2? family= Aboreto & family= Itim & family= Permanent+Marker & family= Quicksand & family= Roboto+Mono:wght@300 & display= trocar');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(star\ wars.gif);
+    background-size: contain;
+}
+header{
+    border: 0;
+    position: absolute;
+    height: 50px;
+    width: 500px;
+    font-size: 55px;
+    margin-bottom: 540px;
+    text-align: center;
+    color: #fbff00;
+}
+h4{
+    text-decoration:underline;
+    cursor:none;
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    /* backdrop-filter o quanto vai ficar desfocado blue (1px) */
+}
+.container .card .content{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+    /* translate y some para baixo ponto y */
+}
+
+.container .card:hover .content{
+transform: translateY(0px);
+opacity: 1;
+/* volta para cima quando passa o mouse */
+}
+
+.container .card .content h2{
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    display: none;
+}
+/* deixar número acima */
+.container .card .content img{
+    position: absolute;
+opacity: 0.7;
+right: 20px;
+width: 100px;
+top: -80px;
+pointer-events: none;
+z-index: -1;
+
+}
+.container .card .content h3{
+    font-size: 1.4em;
+    color: rgb(251, 255, 0);
+    z-index: 1;
+}
+.container .card .content p{
+    font-size: 1em;
+    color: rgb(251, 255, 0);
+    font-weight: 300;
+}
+
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+background-color: rgb(73, 0, 104);
+color: rgb(251, 255, 0);
+text-decoration: none;
+border-radius: 20px;
+font-weight: 500;
+box-shadow: 0 5px 15px rgba(0, 0, 0.2, 0.5);
+}
+/* entra e sai */
